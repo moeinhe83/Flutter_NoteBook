@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main(List<String> args) {
+void main() {
   runApp(MyApp());
 }
 
@@ -36,9 +36,15 @@ class _MyAppState extends State<MyApp> {
       themeMode: _themeMode,
       home: Scaffold(
         appBar: AppBar(
+          actions: [
+            Switch(
+              value: _themeMode == ThemeMode.dark,
+              onChanged: changeTheme,
+            ),
+          ],
           centerTitle: true,
           backgroundColor: Colors.transparent,
-          title: Text("NoteBook", style: moeinstyleAppBar),
+          title: const Text("NoteBook", style: moeinstyleAppBar),
         ),
       ),
     );
