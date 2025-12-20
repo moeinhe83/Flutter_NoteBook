@@ -36,6 +36,8 @@ class _MyAppState extends State<MyApp> {
       themeMode: _themeMode,
       home: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: Colors.transparent,
           title: Text("NoteBook", style: moeinstyleAppBar),
         ),
       ),
