@@ -4,6 +4,7 @@ void main() {
   runApp(MyApp());
 }
 
+// ==================== /* moeinstyle For Text */ ====================
 const moeinstyleAppBar = TextStyle(
   fontSize: 30,
   color: Colors.cyan,
@@ -11,6 +12,7 @@ const moeinstyleAppBar = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
+// ==================== /* MyApp StatefulWidget */ ====================
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
