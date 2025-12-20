@@ -38,15 +38,15 @@ class _MyAppState extends State<MyApp> {
       themeMode: _themeMode,
       home: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: Colors.transparent,
+          title: const Text("NoteBook", style: moeinstyleAppBar),
           actions: [
             Switch(
               value: _themeMode == ThemeMode.dark,
               onChanged: changeTheme,
             ),
           ],
-          centerTitle: true,
-          backgroundColor: Colors.transparent,
-          title: const Text("NoteBook", style: moeinstyleAppBar),
         ),
       ),
     );
