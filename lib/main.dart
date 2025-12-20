@@ -4,6 +4,13 @@ void main(List<String> args) {
   runApp(MyApp());
 }
 
+const moeinstyleAppBar = TextStyle(
+  fontSize: 30,
+  color: Colors.cyan,
+  fontStyle: FontStyle.italic,
+  fontWeight: FontWeight.bold,
+);
+
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
@@ -18,7 +25,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("NoteBook", style: TextStyle(fontSize: 30)),
+          title: Text("NoteBook", style: moeinstyleAppBar),
         ),
       ),
     );
