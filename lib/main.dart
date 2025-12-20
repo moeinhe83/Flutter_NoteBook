@@ -31,6 +31,9 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: _themeMode,
       home: Scaffold(
         appBar: AppBar(
           title: Text("NoteBook", style: moeinstyleAppBar),
