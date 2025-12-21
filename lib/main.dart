@@ -37,7 +37,12 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Colors.transparent,
           title: Text(
             "NoteBook",
-            style: TextStyle(color: appBarTextColor, fontSize: 30),
+            style: TextStyle(
+              color: appBarTextColor,
+              fontSize: 30,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           actions: [
             Switch(
