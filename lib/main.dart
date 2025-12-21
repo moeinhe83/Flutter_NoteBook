@@ -31,6 +31,9 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    final Color appBarTextColor = _themeMode == ThemeMode.dark
+        ? Colors.yellow
+        : Colors.black;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
@@ -40,7 +43,10 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           centerTitle: true,
           backgroundColor: Colors.transparent,
-          title: const Text("NoteBook", style: moeinstyleAppBar),
+          title: Text(
+            "NoteBook",
+            style: TextStyle(color: appBarTextColor, fontSize: 30),
+          ),
           actions: [
             Switch(
               value: _themeMode == ThemeMode.dark,
