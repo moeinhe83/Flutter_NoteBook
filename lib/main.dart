@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp> {
                     MaterialPageRoute(builder: (context) => Info()),
                   );
                 },
-                icon: Icon(Icons.info, size: 35, color: Colors.white),
+                icon: Icon(Icons.info, size: 35, color: Colors.amber),
               );
             },
           ),
