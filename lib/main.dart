@@ -33,14 +33,18 @@ class _MyAppState extends State<MyApp> {
       themeMode: _themeMode,
       home: Scaffold(
         appBar: AppBar(
-          leading: IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Info()),
+          leading: Builder(
+            builder: (context) {
+              return IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Info()),
+                  );
+                },
+                icon: Icon(Icons.info, size: 30, color: Colors.white),
               );
             },
-            icon: Icon(Icons.info, size: 30, color: Colors.white),
           ),
           centerTitle: true,
           backgroundColor: Colors.transparent,
