@@ -106,7 +106,9 @@ class _InfoState extends State<Info> {
             ),
           ],
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: Icon(
               Icons.backspace,
               size: 35,
