@@ -88,6 +88,7 @@ class _InfoState extends State<Info> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     final Color appBarTextColor = _themeMode == ThemeMode.dark
         ? Colors.yellow
         : Colors.black;
