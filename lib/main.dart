@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp> {
                     MaterialPageRoute(builder: (context) => Info()),
                   );
                 },
-                icon: Icon(Icons.info, size: 30, color: Colors.white),
+                icon: Icon(Icons.info, size: 35, color: Colors.white),
               );
             },
           ),
@@ -78,12 +78,42 @@ class Info extends StatefulWidget {
 }
 
 class _InfoState extends State<Info> {
+  ThemeMode _themeMode = ThemeMode.dark;
+
+  void changeTheme(bool isDark) {
+    setState(() {
+      _themeMode = isDark ? ThemeMode.dark : ThemeMode.light;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    final Color appBarTextColor = _themeMode == ThemeMode.dark
+        ? Colors.yellow
+        : Colors.black;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: _themeMode,
       home: Scaffold(
         appBar: AppBar(
+          actions: [
+            Switch(
+              value: _themeMode == ThemeMode.dark,
+              onChanged: changeTheme,
+            ),
+          ],
+          leading: IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.backspace,
+              size: 35,
+              color: Colors.amber,
+            ),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.transparent,
           title: Text(
             "Info Page",
             style: TextStyle(
