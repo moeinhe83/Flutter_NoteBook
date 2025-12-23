@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
                 MaterialPageRoute(builder: (context) => Info()),
               );
             },
-            icon: icon,
+            icon: Icon(Icons.info, size: 30, color: Colors.white),
           ),
           centerTitle: true,
           backgroundColor: Colors.transparent,
@@ -66,3 +66,30 @@ class _MyAppState extends State<MyApp> {
 }
 
 // ==================== /* Info StatefulWidget */ ====================
+class Info extends StatefulWidget {
+  const Info({super.key});
+
+  @override
+  State<Info> createState() => _InfoState();
+}
+
+class _InfoState extends State<Info> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Info Page",
+            style: TextStyle(
+              fontSize: 30,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
