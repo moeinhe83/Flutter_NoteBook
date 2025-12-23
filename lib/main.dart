@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -86,6 +87,13 @@ class _InfoState extends State<Info> {
     });
   }
 
+  Future<void> _openmoeinit() async {
+    final Uri url = Uri.parse("https://moeinit.com");
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      throw Exception("Faild");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     // ignore: unused_local_variable
@@ -126,22 +134,45 @@ class _InfoState extends State<Info> {
             ),
           ),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              height: 200,
-              width: 300,
-              decoration: BoxDecoration(
-                color: Colors.amber,
-                borderRadius: BorderRadius.circular(20),
+        body: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Center(
+                child: Container(
+                  height: 100,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: Colors.amber,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "moeinit.com",
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
               ),
-              child: Text(
-                "moeinit.com",
-                style: TextStyle(fontSize: 30),
+              SizedBox(height: 10),
+              TextButton(
+                style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all(
+                    Colors.amber,
+                  ),
+                ),
+                onPressed: _openmoeinit,
+                child: Text(
+                  "Open moeinit.com Website",
+                  style: TextStyle(fontSize: 20, color: Colors.black),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
