@@ -33,6 +33,15 @@ class _MyAppState extends State<MyApp> {
       themeMode: _themeMode,
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Info()),
+              );
+            },
+            icon: icon,
+          ),
           centerTitle: true,
           backgroundColor: Colors.transparent,
           title: Text(
@@ -55,3 +64,5 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+
+// ==================== /* Info StatefulWidget */ ====================
