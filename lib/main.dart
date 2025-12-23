@@ -126,6 +126,23 @@ class _InfoState extends State<Info> {
             ),
           ),
         ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              height: 200,
+              width: 300,
+              decoration: BoxDecoration(
+                color: Colors.amber,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Text(
+                "moeinit.com",
+                style: TextStyle(fontSize: 30),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
