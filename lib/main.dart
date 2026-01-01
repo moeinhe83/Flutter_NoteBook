@@ -94,7 +94,15 @@ class _MyAppState extends State<MyApp> {
             crossAxisCount: 2,
           ),
           itemCount: 3,
-          itemBuilder: (context, index) {},
+          itemBuilder: (context, index) {
+            return Card(
+              color: Colors.amber,
+              child: Column(children: <Widget>[
+
+                ],  
+              ),
+            );
+          },
         ),
       ),
     );
