@@ -63,7 +63,12 @@ class _MyAppState extends State<MyApp> {
           actions: [
             PopupMenuButton<MenuAction>(
               icon: Icon(Icons.menu, color: Colors.amber, size: 30),
-              onSelected: (value) {},
+              onSelected: (value) {
+                switch (value) {
+                  case MenuAction.delete:
+                    break;
+                }
+              },
               itemBuilder: (context) {
                 return [
                   PopupMenuItem<MenuAction>(
