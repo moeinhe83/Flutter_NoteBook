@@ -59,6 +59,11 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
           actions: [
+            PopupMenuButton(
+              itemBuilder: (context) {
+                return [PopupMenuItem(child: Text("Delete"))];
+              },
+            ),
             Switch(
               value: _themeMode == ThemeMode.dark,
               onChanged: changeTheme,
