@@ -86,7 +86,14 @@ class _MyAppState extends State<MyApp> {
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.blueAccent,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => EditUpdateView(),
+              ),
+            );
+          },
           child: Icon(Icons.add, size: 30),
         ),
         body: GridView.builder(
@@ -146,6 +153,7 @@ class _EditUpdateViewState extends State<EditUpdateView> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     final Color appBarTextColor = _themeMode == ThemeMode.dark
         ? Colors.yellow
         : Colors.black;
