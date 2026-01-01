@@ -128,6 +128,48 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
+// ==================== /* EditUpdateView StatefulWidget */ ====================
+class EditUpdateView extends StatefulWidget {
+  const EditUpdateView({super.key});
+
+  @override
+  State<EditUpdateView> createState() => _EditUpdateViewState();
+}
+
+class _EditUpdateViewState extends State<EditUpdateView> {
+  ThemeMode _themeMode = ThemeMode.dark;
+  void changeTheme(bool isDark) {
+    setState(() {
+      _themeMode = isDark ? ThemeMode.dark : ThemeMode.light;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final Color appBarTextColor = _themeMode == ThemeMode.dark
+        ? Colors.yellow
+        : Colors.black;
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: _themeMode,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "New Note",
+            style: TextStyle(
+              fontSize: 30,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 // ==================== /* Info StatefulWidget */ ====================
 class Info extends StatefulWidget {
   const Info({super.key});
