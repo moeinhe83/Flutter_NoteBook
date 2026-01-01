@@ -164,6 +164,16 @@ class _EditUpdateViewState extends State<EditUpdateView> {
       themeMode: _themeMode,
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.backspace_rounded,
+              color: Colors.amber,
+              size: 30,
+            ),
+          ),
           title: Text(
             "New Note",
             style: TextStyle(
