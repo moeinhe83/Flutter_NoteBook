@@ -89,6 +89,7 @@ class _MyAppState extends State<MyApp> {
           onPressed: () {},
           child: Icon(Icons.add, size: 30),
         ),
+        body: Center(),
       ),
     );
   }
