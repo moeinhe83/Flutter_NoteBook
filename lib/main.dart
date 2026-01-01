@@ -168,6 +168,12 @@ class _EditUpdateViewState extends State<EditUpdateView> {
       themeMode: _themeMode,
       home: Scaffold(
         appBar: AppBar(
+          actions: [
+            Switch(
+              value: _themeMode == ThemeMode.dark,
+              onChanged: changeTheme,
+            ),
+          ],
           leading: Builder(
             builder: (context) {
               return IconButton(
