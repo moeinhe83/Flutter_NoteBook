@@ -60,6 +60,7 @@ class _MyAppState extends State<MyApp> {
           ),
           actions: [
             PopupMenuButton(
+              icon: Icon(Icons.menu, color: Colors.amber, size: 30),
               itemBuilder: (context) {
                 return [PopupMenuItem(child: Text("Delete"))];
               },
