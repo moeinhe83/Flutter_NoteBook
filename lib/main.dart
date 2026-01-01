@@ -118,6 +118,7 @@ class _MyAppState extends State<MyApp> {
                       color: Colors.black,
                     ),
                   ),
+                  // ignore: avoid_unnecessary_containers
                   Container(
                     child: Text(
                       "moeinit.com",
@@ -178,7 +179,10 @@ class _EditUpdateViewState extends State<EditUpdateView> {
             builder: (context) {
               return IconButton(
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MyApp()),
+                  );
                 },
                 icon: Icon(
                   Icons.backspace_rounded,
