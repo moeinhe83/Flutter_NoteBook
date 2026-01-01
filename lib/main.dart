@@ -89,7 +89,13 @@ class _MyAppState extends State<MyApp> {
           onPressed: () {},
           child: Icon(Icons.add, size: 30),
         ),
-        body: Center(),
+        body: GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+          ),
+          itemCount: 3,
+          itemBuilder: (context, index) {},
+        ),
       ),
     );
   }
