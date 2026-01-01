@@ -110,7 +110,10 @@ class _MyAppState extends State<MyApp> {
                   Container(
                     child: Text(
                       "moeinit.com",
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                      ),
                       overflow: TextOverflow.fade,
                       maxLines: 5,
                     ),
