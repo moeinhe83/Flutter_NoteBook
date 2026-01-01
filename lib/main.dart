@@ -53,7 +53,7 @@ class _MyAppState extends State<MyApp> {
             "NoteBook",
             style: TextStyle(
               color: appBarTextColor,
-              fontSize: 30,
+              fontSize: 20,
               fontStyle: FontStyle.italic,
               fontWeight: FontWeight.bold,
             ),
