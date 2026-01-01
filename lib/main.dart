@@ -84,17 +84,21 @@ class _MyAppState extends State<MyApp> {
             ),
           ],
         ),
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.blueAccent,
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => EditUpdateView(),
-              ),
+        floatingActionButton: Builder(
+          builder: (context) {
+            return FloatingActionButton(
+              backgroundColor: Colors.blueAccent,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => EditUpdateView(),
+                  ),
+                );
+              },
+              child: Icon(Icons.add, size: 30),
             );
           },
-          child: Icon(Icons.add, size: 30),
         ),
         body: GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -164,19 +168,25 @@ class _EditUpdateViewState extends State<EditUpdateView> {
       themeMode: _themeMode,
       home: Scaffold(
         appBar: AppBar(
-          leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
+          leading: Builder(
+            builder: (context) {
+              return IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(
+                  Icons.backspace_rounded,
+                  color: Colors.amber,
+                  size: 30,
+                ),
+              );
             },
-            icon: Icon(
-              Icons.backspace_rounded,
-              color: Colors.amber,
-              size: 30,
-            ),
           ),
+          centerTitle: true,
           title: Text(
             "New Note",
             style: TextStyle(
+              color: Colors.amber,
               fontSize: 30,
               fontStyle: FontStyle.italic,
               fontWeight: FontWeight.bold,
