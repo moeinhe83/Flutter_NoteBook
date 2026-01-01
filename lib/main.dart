@@ -92,14 +92,30 @@ class _MyAppState extends State<MyApp> {
         body: GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
+            childAspectRatio: 1 / 1.2,
           ),
           itemCount: 3,
           itemBuilder: (context, index) {
             return Card(
               color: Colors.amber,
-              child: Column(children: <Widget>[
-
-                ],  
+              child: Column(
+                children: <Widget>[
+                  Text(
+                    "Title",
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.black,
+                    ),
+                  ),
+                  Container(
+                    child: Text(
+                      "moeinit.com",
+                      style: TextStyle(fontSize: 20),
+                      overflow: TextOverflow.fade,
+                      maxLines: 5,
+                    ),
+                  ),
+                ],
               ),
             );
           },
