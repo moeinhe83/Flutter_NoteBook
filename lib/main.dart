@@ -5,6 +5,8 @@ void main() {
   runApp(MyApp());
 }
 
+enum MenuAction { delete }
+
 // ==================== /* MyApp StatefulWidget */ ====================
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -59,10 +61,16 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
           actions: [
-            PopupMenuButton(
+            PopupMenuButton<MenuAction>(
               icon: Icon(Icons.menu, color: Colors.amber, size: 30),
+              onSelected: (value) {},
               itemBuilder: (context) {
-                return [PopupMenuItem(child: Text("Delete"))];
+                return [
+                  PopupMenuItem<MenuAction>(
+                    value: MenuAction.delete,
+                    child: Text("Delete"),
+                  ),
+                ];
               },
             ),
             Switch(
