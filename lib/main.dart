@@ -173,7 +173,7 @@ class _EditUpdateViewState extends State<EditUpdateView> {
             IconButton(
               tooltip: "Add Text",
               onPressed: () {},
-              icon: Icon(Icons.add, color: Colors.amber, size: 30),
+              icon: Icon(Icons.check, color: Colors.amber, size: 30),
             ),
             Switch(
               value: _themeMode == ThemeMode.dark,
