@@ -149,6 +149,8 @@ class EditUpdateView extends StatefulWidget {
 }
 
 class _EditUpdateViewState extends State<EditUpdateView> {
+  final TextEditingController _title = TextEditingController();
+  final TextEditingController _text = TextEditingController();
   ThemeMode _themeMode = ThemeMode.dark;
   void changeTheme(bool isDark) {
     setState(() {
@@ -214,6 +216,7 @@ class _EditUpdateViewState extends State<EditUpdateView> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextField(
+                controller: _title,
                 decoration: InputDecoration(
                   hint: Text(
                     "Title",
@@ -228,6 +231,7 @@ class _EditUpdateViewState extends State<EditUpdateView> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextField(
+                controller: _text,
                 decoration: InputDecoration(
                   hint: Text(
                     "Text",
