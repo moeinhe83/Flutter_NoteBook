@@ -219,7 +219,7 @@ class _EditUpdateViewState extends State<EditUpdateView> {
                 controller: _title,
                 decoration: InputDecoration(
                   hint: Text(
-                    "Title",
+                    "Title ...",
                     style: TextStyle(color: Colors.amber),
                   ),
                   border: OutlineInputBorder(
@@ -234,7 +234,7 @@ class _EditUpdateViewState extends State<EditUpdateView> {
                 controller: _text,
                 decoration: InputDecoration(
                   hint: Text(
-                    "Text",
+                    "Text ...",
                     style: TextStyle(color: Colors.amber),
                   ),
                   border: OutlineInputBorder(
