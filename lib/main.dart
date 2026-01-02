@@ -228,6 +228,7 @@ class _EditUpdateViewState extends State<EditUpdateView> {
                 ),
               ),
             ),
+            SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextField(
