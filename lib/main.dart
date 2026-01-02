@@ -215,6 +215,24 @@ class _EditUpdateViewState extends State<EditUpdateView> {
               padding: const EdgeInsets.all(10.0),
               child: TextField(
                 decoration: InputDecoration(
+                  hint: Text(
+                    "Title",
+                    style: TextStyle(color: Colors.amber),
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  hint: Text(
+                    "Text",
+                    style: TextStyle(color: Colors.amber),
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
