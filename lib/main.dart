@@ -208,20 +208,20 @@ class _EditUpdateViewState extends State<EditUpdateView> {
             ),
           ),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              TextField(
+        body: Column(
+          children: <Widget>[
+            SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
