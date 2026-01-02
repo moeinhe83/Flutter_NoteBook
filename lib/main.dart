@@ -218,7 +218,7 @@ class _EditUpdateViewState extends State<EditUpdateView> {
               child: TextField(
                 controller: _title,
                 decoration: InputDecoration(
-                  hint: Text(
+                  label: Text(
                     "Title ...",
                     style: TextStyle(color: Colors.amber),
                   ),
@@ -234,7 +234,7 @@ class _EditUpdateViewState extends State<EditUpdateView> {
               child: TextField(
                 controller: _text,
                 decoration: InputDecoration(
-                  hint: Text(
+                  label: Text(
                     "Text ...",
                     style: TextStyle(color: Colors.amber),
                   ),
